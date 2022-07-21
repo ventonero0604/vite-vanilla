@@ -1,0 +1,62 @@
+/* ---------------------------------- *\
+   #PAGE
+\* ---------------------------------- */
+@import './variables.scss';
+
+body {
+  font-family: -apple-system-subset, Helvetica, Hiragino Kaku Gothic ProN, sans-serif;
+  position: relative;
+  color: $black;
+}
+
+a {
+  color: $black;
+}
+
+a,
+button {
+  transition: all 0.2s;
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.pc {
+  display: block;
+}
+.sp {
+  display: none;
+}
+.pc_inline {
+  display: inline-block;
+}
+.sp_inline {
+  display: none;
+}
+.pc_flex {
+  display: flex;
+}
+.sp_flex {
+  display: none;
+}
+
+@include breakPoint(md) {
+  .pc {
+    display: none;
+  }
+  .sp {
+    display: block;
+  }
+  .pc_inline {
+    display: none;
+  }
+  .sp_inline {
+    display: inline-block;
+  }
+  .pc_flex {
+    display: none;
+  }
+  .sp_flex {
+    display: flex;
+  }
+}

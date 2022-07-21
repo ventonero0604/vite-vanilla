@@ -1,0 +1,17 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* foundation */
+@import './foundation/reset.scss';
+@import './foundation/variables.scss';
+@import './foundation/common.scss';
+@import './foundation/breakPoint.scss';
+@import './foundation/page.scss';
+@import './foundation/pxvw.scss';
+
+/* component */
+@import './component/annotation.scss';
+
+/* ui */
+@import './ui/header.scss';
