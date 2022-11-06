@@ -21,7 +21,7 @@ export default defineConfig({
   server: {
     host: true //IPアドレスを有効化
   },
-  root: './src', //開発ディレクトリ設定
+  root: './', //開発ディレクトリ設定
   build: {
     base: '/vite-vanilla/', //gitのリポジトリ
     outDir: '../dist', //出力場所の指定
