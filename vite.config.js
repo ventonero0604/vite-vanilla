@@ -20,6 +20,7 @@ const pageData = {
 const root = 'src';
 
 export default defineConfig({
+  base: "./",
   server: {
     host: true //IPアドレスを有効化
   },
@@ -52,14 +53,15 @@ export default defineConfig({
   /*
     プラグインの設定を追加
   */
-  plugins: [
-    handlebars({
-      //コンポーネントの格納ディレクトリを指定
-      partialDirectory: resolve(__dirname, root, 'components'),
-      //各ページ情報の読み込み
-      context(pagePath) {
-        return pageData[pagePath];
-      }
-    })
-  ]
+    plugins: [
+      handlebars({
+        //コンポーネントの格納ディレクトリを指定
+        partialDirectory: resolve(__dirname, root, "components"),
+        //各ページ情報の読み込み
+        context(pagePath) {
+          const pageName = pagePath.split("/").pop();
+          return pageData[pageName];
+        },
+      }),
+    ],
 });
